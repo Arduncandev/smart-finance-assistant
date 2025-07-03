@@ -75,7 +75,7 @@
                         <div class="row text-center">
                             <div class="col-6">
                                 <small class="text-muted d-block">Initial Balance</small>
-                                <strong th:text="${' + #numbers.formatDecimal(account.initialBalance, 1, 2)}">$0.00</strong>
+                                <strong th:text="${#numbers.formatDecimal(account.initialBalance ?: 0, 1, 2)}">$0.00</strong>
                             </div>
                             <div class="col-6">
                                 <small class="text-muted d-block">Transactions</small>
